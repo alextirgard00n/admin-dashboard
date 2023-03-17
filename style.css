@@ -1,0 +1,42 @@
+@import url('https://fonts.googleapis.com/css2?family=Mulish:wght@400;600;700&display=swap');
+
+:root {
+    --sidebar: #363740;
+    --sidebarText: #a4a6b3;
+    --bodyBackground: #f7f8fc;
+    --cardBackground: #fff;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    height: 100vh;
+    font-family: "mulish", sans-serif;
+    background-color: var(--bodyBackground);
+    display: grid;
+    grid-template-columns: clamp(220px, 25%, 280px) 1fr;
+    /* grid-template-columns: minmax(220px, 280px) 1fr; */
+}
+
+.sidebar {
+    background-color: var(--sidebar);
+    color: var(--sidebarText);
+}
+
+.sidebar-links {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+ul {
+    list-style: none;
+}
+
+li {
+    padding: 1.2em;
+}
