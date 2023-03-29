@@ -7,34 +7,69 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Admin-Dashboard</title>
     <link rel="stylesheet" href="style.css">
+    <script src="https://kit.fontawesome.com/76e985f9f8.js" crossorigin="anonymous"></script>
 </head>
 
 <body>
     <div class="sidebar">
-        <div class="logo-container"></div>
+        <div class="logo-container">
+            <img src="./images/logoipsum-logo-54.svg" alt="">
+        </div>
         <nav class="sidebar-links">
             <ul>
-                <!--  -->
-                <li>Overview</li>
-                <li>Tickets</li>
-                <li>Ideas</li>
-                <li>Ideas</li>
-                <li>Contacts</li>
-                <li>Agents</li>
-                <li>Articles</li>
+                <li>
+                    <i class="fa-solid fa-chart-pie"></i>
+                    <p>Overview</p>
+                </li>
+                <li><i class="fa-solid fa-ticket"></i>
+                    <p>Tickets</p>
+                </li>
+                <li>
+                    <i class="fa-solid fa-lightbulb"></i>
+                    <p>Ideas</p>
+                </li>
+                <li>
+                    <i class="fa-solid fa-users"></i>
+                    <p>Contacts</p>
+                </li>
+                <li>
+                    <i class="fa-solid fa-user-tie"></i>
+                    <p>Agents</p>
+                </li>
+                <li>
+                    <i class="fa-solid fa-book"></i>
+                    <p>Articles</p>
+                </li>
             </ul>
             <ul>
-                <li>Settings</li>
-                <li>Subscription</li>
+                <li>
+                    <i class="fa-solid fa-gear"></i>
+                    <p>Settings</p>
+                </li>
+                <li>
+                    <i class="fa-sharp fa-solid fa-circle-info"></i>
+                    <p>Support</p>
+                </li>
+                <li>
+                    <i class="fa-solid fa-shield-virus"></i>
+                    <p>Privacy</p>
+                </li>
             </ul>
         </nav>
     </div>
-    <div class="main">
+    <main>
         <div class="header">
             <h1>Overview</h1>
+            <div class="user">
+                <div class="icons">
+                    <i class="fa-solid fa-magnifying-glass"></i>
+                    <i class="fa-solid fa-bell"></i>
+                </div>
+                <p class="name">Kiiroitori Birb</p>
+                <img src="./images/kiiroitori.png" alt="kiiroitori" class="profile-pic">
+            </div>
         </div>
-        <div class="user">
-        </div>
+
 
         <div class="info-cards">
             <div class="info-card"></div>
@@ -57,8 +92,10 @@
             <div class="lg-card"></div>
             <div class="lg-card"></div>
         </div>
-    </div>
+    </main>
 
+    <!-- <i class="fa-solid fa-magnifying-glass"></i> 
+    <i class="fa-solid fa-bell"></i>-->
 </body>
 
 </html>
