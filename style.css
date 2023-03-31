@@ -24,6 +24,7 @@ body {
 }
 
 .sidebar {
+    grid-column-start: 1;
     background-color: var(--sidebar);
     color: var(--sidebarText);
     /* height: 100%; */
@@ -34,7 +35,7 @@ body {
     left: 0;
     max-height: 100vh;
     min-height: min-content;
-
+    transition: .3 ease-in;
     /* padding-top: 0.35rem; */
 }
 
@@ -155,7 +156,8 @@ main {
 .icons i:hover,
 .user img:hover,
 .name:hover,
-.logo-container img:hover {
+.logo-container img:hover,
+.krabby-patty:hover {
     transform: scale(1.1);
 }
 
@@ -178,12 +180,6 @@ main {
     text-align: center;
     font-weight: bold;
     padding: 1.5rem 0;
-
-    /* apple drop shadow */
-    /* border: 1px solid #adadad;
-    -webkit-box-shadow: 0 20px 70px rgba(0, 0, 0, 0.1);
-    -moz-box-shadow: 0 20px 70px rgba(0, 0, 0, 0.1);
-    box-shadow: 0 20px 70px rgba(0, 0, 0, 0.1); */
 }
 
 .info-card>p:first-child {
@@ -331,10 +327,23 @@ main {
     border: none;
 }
 
+.krabby-patty {
+    display: none;
+    position: absolute;
+    left: 1.5rem;
+    top: 1.8rem;
+    cursor: pointer;
+    font-size: 1.5em;
+    transition: .2s;
+}
+
+.open {
+    transform: translateX(0);
+}
+
 
 @media (max-width: 1080px) {
     .info-cards {
-
         grid-template-columns: repeat(2, 1fr);
         grid-template-rows: repeat(2, 1fr);
     }
@@ -349,6 +358,12 @@ main {
         grid-template-columns: 1fr;
     }
 
+    .trends {
+        border: 2px solid #dfe0eb;
+        border-radius: 0.5rem;
+        border-radius: 0.5rem;
+    }
+
     .data-container {
         grid-column: 1 / -1;
         border-radius: 0.5rem;
@@ -356,8 +371,57 @@ main {
     }
 }
 
-/* @media (max-width: 740px) {
+@media (max-width: 740px),
+(max-height: 650px) {
+
+    .header h1 {
+        padding-left: 2rem;
+    }
+
     .sidebar {
         display: none;
+        overflow: auto;
+    }
+
+    body {
+        grid-template-columns: 1fr;
+    }
+
+    .krabby-patty {
+        display: block;
+    }
+}
+
+@media (max-width: 530px) {
+    .header {
+        grid-template-columns: 3fr auto;
+    }
+
+    .user {
+        /* width: auto; */
+        /* justify-content: flex-end; */
+        gap: 1.6rem;
+    }
+
+    .icons {
+        display: none;
+    }
+}
+
+/* @media (max-height: 600px) {
+    .sidebar {
+        position: relative;
+        min-height: 100vh;
     }
 } */
+
+@media (max-height: 650px) {
+
+    .sidebar {
+        overflow: auto;
+    }
+
+    .sidebar-links {
+        gap: 1.5rem;
+    }
+}
