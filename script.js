@@ -15,12 +15,10 @@ listItems.forEach(li => li.addEventListener('click', () => {
     sidebar.classList.remove('active');
 }));
 
-document.body.addEventListener("click", () => {
-    if (sidebar.classList.contains("active")) {
-        // sidebar.classList.remove("active");
-        console.log("help");
-    }
-});
+// document.body.addEventListener("click", () => {
+//     if (sidebar.classList.contains("active")) {
+//     }
+// });
 
 
 
