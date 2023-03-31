@@ -3,6 +3,7 @@ const sidebar = document.querySelector('.sidebar');
 const closebtn = document.querySelector('.xbtn');
 const listItems = document.querySelectorAll('li');
 
+// toggles function on click
 krabbyPatty.addEventListener('click', togglebtn);
 closebtn.addEventListener('click', togglebtn);
 

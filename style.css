@@ -338,6 +338,7 @@ main {
     transition: .2s;
 }
 
+
 @media (max-width: 1080px) {
     .info-cards {
         grid-template-columns: repeat(2, 1fr);
