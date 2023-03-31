@@ -1,24 +1,18 @@
 const krabbyPatty = document.querySelector('.krabby-patty');
 const sidebar = document.querySelector('.sidebar');
-const closebtn = document.querySelector('.close');
+const closebtn = document.querySelector('.xbtn');
 const listItems = document.querySelectorAll('li');
 
-krabbyPatty.addEventListener('click', () => {
+krabbyPatty.addEventListener('click', togglebtn);
+closebtn.addEventListener('click', togglebtn);
+
+listItems.forEach(li => li.addEventListener('click', togglebtn));
+
+function togglebtn() {
     sidebar.classList.toggle('active');
-});
+    closebtn.classList.toggle('close');
+}
 
-closebtn.addEventListener('click', () => {
-    sidebar.classList.remove('active');
-});
-
-listItems.forEach(li => li.addEventListener('click', () => {
-    sidebar.classList.remove('active');
-}));
-
-// document.body.addEventListener("click", () => {
-//     if (sidebar.classList.contains("active")) {
-//     }
-// });
 
 
 

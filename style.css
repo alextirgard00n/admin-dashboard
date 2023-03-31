@@ -35,22 +35,21 @@ body {
     left: 0;
     max-height: 100vh;
     min-height: min-content;
-    transition: .3 ease-in;
-    /* padding-top: 0.35rem; */
+    transition: transform .5s ease-in-out;
 }
 
-.close {
+.xbtn {
     display: none;
     font-size: 1.5em;
     position: absolute;
     top: 1.3em;
     left: 10em;
     transition: .2s;
+    cursor: pointer;
 }
 
 .logo-container {
     padding: 1.6rem 1.25rem 1.75rem 1.25rem;
-    /* padding-bottom: 1.75rem; */
 }
 
 .logo-container img {
@@ -77,7 +76,6 @@ body {
     background: #3e4049;
     color: #dde2ff;
     border-left: 4px solid #dde2ff;
-    /* padding-left: calc(1.1rem - 4px); */
 }
 
 .sidebar li:hover>i,
@@ -103,7 +101,6 @@ main {
     grid-template-rows: auto auto 1fr auto;
     grid-template-columns: repeat(8, 1fr);
     padding: 0 1.5rem 1.5rem;
-    /* padding: 1.5rem; */
     max-height: 100%;
 }
 
@@ -112,7 +109,6 @@ main {
     grid-column: 1/ 9;
     display: grid;
     grid-template-columns: 3fr 300px;
-    /* grid-row: 1; */
 }
 
 .user {
@@ -120,7 +116,6 @@ main {
     align-items: center;
     justify-content: space-between;
     color: var(--sidebarText);
-    /* padding: 0.25rem 1.25rem; */
     grid-column-start: 2;
 }
 
@@ -129,8 +124,6 @@ main {
     align-items: center;
     font-size: 1.45rem;
     color: var(--mainColor);
-    /* margin-top: auto;
-    margin-bottom: auto; */
 }
 
 .user img {
@@ -138,8 +131,6 @@ main {
     height: auto;
     cursor: pointer;
     transition: .2s;
-    /* border: 2px solid #dfe0eb; */
-    /* border-radius: 50%; */
 }
 
 .name {
@@ -177,7 +168,6 @@ main {
     grid-row: 2;
     display: grid;
     grid-template-columns: repeat(4, 1fr);
-    /* grid-template-rows: repeat(2, 1fr); */
     column-gap: 1.5rem;
     row-gap: 1rem;
     margin-top: 1rem;
@@ -385,8 +375,13 @@ main {
     }
 
     .sidebar {
-        display: none;
-        overflow: auto;
+        position: absolute;
+        width: 280px;
+        height: 100%;
+        z-index: 1;
+        overflow-y: auto;
+        transform: translateX(-101%);
+        transition: transform .5s ease-in-out;
     }
 
     .close {
@@ -402,11 +397,12 @@ main {
     }
 
     .active {
-        display: flex;
         position: fixed;
         z-index: 1;
         height: 100%;
         width: 280px;
+        transform: translateX(0);
+        transition: transform .5s ease-in-out;
     }
 }
 
@@ -421,16 +417,5 @@ main {
 
     .icons {
         display: none;
-    }
-}
-
-@media (max-height: 650px) {
-
-    .sidebar {
-        overflow: auto;
-    }
-
-    .sidebar-links {
-        gap: 1.5rem;
     }
 }
